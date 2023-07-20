@@ -1,0 +1,58 @@
+<section>
+    <h2>Qualifications</h2>
+  
+    <!-- Add button to show/hide the form -->
+    <button class="add-button Add" (click)="toggleForm()">Add Course</button>
+  
+    <!-- Form to add a new qualification -->
+    <div *ngIf="showForm">
+      <form (submit)="addQualification()">
+        <label for="qualification">Qualification:</label>
+        <input type="text" id="qualification" name="qualification" [(ngModel)]="newQualification.qualification" required>
+  
+        <label for="institute">Institute:</label>
+        <input type="text" id="institute" name="institute" [(ngModel)]="newQualification.institute" required>
+  
+        <label for="duration">Course Duration:</label>
+        <input type="text" id="duration" name="duration" [(ngModel)]="newQualification.duration" required>
+  
+        <label for="percentage">Percentage:</label>
+        <input type="text" id="percentage" name="percentage" [(ngModel)]="newQualification.percentage" required>
+  
+        <button type="submit" class="Add">Add</button>
+      </form>
+    </div>
+  
+    
+    <!-- Display the qualifications table -->
+<table class="qualifications-table">
+    <thead>
+      <tr>
+        <th>Qualification</th>
+        <th>Institute</th>
+        <th>Course Duration</th>
+        <th>Percentage</th>
+        <th>Action</th> <!-- New column for edit/delete buttons -->
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let qualification of qualifications">
+        <td>{{ qualification.qualification }}</td>
+        <td>{{ qualification.institute }}</td>
+        <td>{{ qualification.duration }}</td>
+        <td>{{ qualification.percentage }}</td>
+        <td>
+          <button class="Add" (click)="editQualification(qualification)">Edit</button>
+          <button class="Add" (click)="deleteQualification(qualification)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  
+  
+    <!-- Display message when no qualifications added -->
+    <div *ngIf="qualifications.length === 0">
+      No qualifications added.
+    </div>
+  </section>
+  

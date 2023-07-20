@@ -1,0 +1,15 @@
+nav{
+    background-color: black;
+    color:white;
+    padding:20px;
+    font-size: larger;
+
+}
+a{
+    text-decoration: none;
+    color:white;
+    margin-left: 20px;
+}
+a:hover{
+    color:#fdbe70;
+}
