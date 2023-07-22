@@ -23,4 +23,12 @@ describe('AppComponent', () => {
   it('should create the app', () => {
     expect(component).toBeTruthy();
   });
+  it('should render the app-header component', () => {
+    const headerElement = fixture.nativeElement.querySelector('app-header');
+    expect(headerElement).toBeTruthy();
+  });
+  it('should render the router-outlet', () => {
+    const routerOutletElement = fixture.nativeElement.querySelector('router-outlet');
+    expect(routerOutletElement).toBeTruthy();
+  });
 });

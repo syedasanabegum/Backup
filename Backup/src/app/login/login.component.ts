@@ -30,4 +30,7 @@ export class LoginComponent {
       this.router.navigate(['/home']);
     });
   }
+  nav() {
+    this.router.navigate(['/home']);
+}
 }
