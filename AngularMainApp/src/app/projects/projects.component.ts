@@ -35,7 +35,7 @@ export class ProjectsComponent {
     return this.searchTerm ? this.filteredProjects : this.projects;
   }
 }
-interface Project {
+export interface Project {
   image: string;
   title: string;
   description: string;

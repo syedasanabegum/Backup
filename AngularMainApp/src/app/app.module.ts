@@ -71,7 +71,7 @@ import { ObservableComponent } from './observable/observable.component';
     MatAutocompleteModule
 
   ],
-  providers: [AuthService, AuthGuard,SearchService],
+  providers: [AuthService, AuthGuard,SearchService,HeaderComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

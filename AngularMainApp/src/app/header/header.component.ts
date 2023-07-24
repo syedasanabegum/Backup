@@ -9,6 +9,9 @@ import { Router } from '@angular/router';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
+  navigateToQualification(): void {
+    this.router.navigate(['/qualification']);
+  }
   constructor(private authService: AuthService, private router: Router) {}
   logout(): void {
     this.authService.logout();

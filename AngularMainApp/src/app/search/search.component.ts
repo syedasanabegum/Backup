@@ -15,25 +15,7 @@ import {MatFormFieldModule} from '@angular/material/form-field';
   
 })
 export class SearchComponent {
-  /*
-  searchResults: SearchItem[] = [];
-  loading: boolean = false;
-
-  constructor(private searchService: SearchService) {}
-
-  doSearch(term: string) {
-    this.loading = true;
-    this.searchService
-      .search(term)
-      .then((results: SearchItem[]) => {
-        this.searchResults = results;
-        this.loading = false;
-      })
-      .catch((error: any) => {
-        console.error("An error occurred:", error);
-        this.loading = false;
-      });
-  }*/
+  
   searchTerm: string = '';
   loading: boolean = false;
   error: string | null = null;

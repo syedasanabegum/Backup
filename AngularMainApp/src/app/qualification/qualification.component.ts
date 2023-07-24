@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 
 interface Qualification {
+  id:string,
   qualification: string;
   institute: string;
   duration: string;
@@ -16,6 +17,7 @@ export class QualificationComponent {
   showForm: boolean = false;
   qualifications: Qualification[] = [];
   newQualification: Qualification = {
+    id:'',
     qualification: '',
     institute: '',
     duration: '',
@@ -61,6 +63,7 @@ export class QualificationComponent {
     this.editMode = false;
     this.editIndex = -1;
     this.newQualification = {
+      id:'',
       qualification: '',
       institute: '',
       duration: '',

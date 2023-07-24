@@ -7,45 +7,52 @@
   <title>Document</title>
 </head>
 <body>
+  <!-- skills.component.html -->
   <app-header></app-header>
-  <section>
-    <div class="box">
-      <h2>Skills</h2>
-    
-      <!-- Add button to show/hide the form -->
-      <button (click)="toggleForm()" class="Add">Add Skill</button>
-    
-      <!-- Form to add a new skill -->
-      <div *ngIf="showForm">
-        <form (submit)="addSkill()">
-          <div class="row">
-            <div class="col"><label for="skill">Skill:</label></div>
-            <div class="col"><input type="text" id="skill" name="skill" [(ngModel)]="newSkill.skill" required></div>
-          </div>
-          <div class="row">
-            <div class="col"><label for="percentage">Percentage:</label></div>
-            <div class="col"><input type="number" id="percentage" name="percentage" [(ngModel)]="newSkill.percentage" required></div>
-          </div>
-          <button type="submit" class="Add">Add</button>
-        </form>    
-      </div>
-    
-      <!-- Display skills with progress bars -->
-      <div *ngIf="skills.length > 0">
-        <div *ngFor="let skill of skills" class="bar">
-          <h3>{{ skill.skill }}</h3>
-          <div class="progress">
-            <div class="progress-bar" [style.width.%]="skill.percentage"></div>
-          </div>
+<section>
+  <div class="box">
+    <h2>Skills</h2>
+
+    <!-- Add button to show/hide the form -->
+    <button (click)="toggleForm()" class="Add">Add Skill</button>
+
+    <!-- Form to add a new skill -->
+    <div *ngIf="showForm">
+      <form (submit)="addSkill()">
+        <div class="row">
+          <div class="col"><label for="skill">Skill:</label></div>
+          <div class="col"><input type="text" id="skill" name="skill" [(ngModel)]="newSkill.skill" required></div>
+        </div>
+        <div class="row">
+          <div class="col"><label for="percentage">Percentage:</label></div>
+          <div class="col"><input type="number" id="percentage" name="percentage" [(ngModel)]="newSkill.percentage" required></div>
+        </div>
+        <button type="submit" id="greetButton" class="Add new add-button">Add</button>
+      </form>
+    </div>
+
+    <!-- Display skills with progress bars -->
+  <div class="skills-list">
+    <div *ngIf="skills.length > 0">
+      <div *ngFor="let skill of skills" class="bar">
+        <h3>{{ skill.skill }}</h3>
+        <div class="progress">
+          <div class="progress-bar" [style.width.%]="skill.percentage"></div>
         </div>
       </div>
-    
-      <!-- Display message when no skills added -->
-      <div *ngIf="skills.length === 0">
-        No skills added.
-      </div>
     </div>
-    </section>
+
+    <!-- Display message when no skills added -->
+    <div *ngIf="skills.length === 0" class="no-skills-message">
+      No skills added.
+    </div>
+
+</div>
+
+
+  </div>
+</section>
+
 </body>
 </html>
 
