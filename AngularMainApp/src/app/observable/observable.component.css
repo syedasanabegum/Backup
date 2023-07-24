@@ -1,0 +1,21 @@
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    margin:10px;
+    border-radius: 20px;
+    padding:20px;
+    background-color: #fdbe70;
+    width:50%;
+}
+.Add{
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    background-color: #1a1716;
+    color:white;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }

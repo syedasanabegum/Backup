@@ -1,0 +1,35 @@
+.wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+h2{
+    text-align: center;
+}
+.box{
+    border:solid 2px grey;
+    margin:20px;
+    padding:20px;
+    border-radius: 20px;
+    width:45%;
+    background-color: #fdbe70;
+}
+.post-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Add{
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    background-color: #201b1a;
+    color:white;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  input, label{
+    border-radius: 10px;
+    border:none;
+    margin:10px;
+  }

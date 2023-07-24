@@ -1,0 +1,59 @@
+<app-header></app-header>
+<h2>Employee List</h2>
+
+<button mat-raised-button color="primary" (click)="openCreateDialog()">Create Employee</button>
+<button mat-raised-button color="primary" (click)="executeArrayMethods()">Array Methods</button>
+<br>
+<button mat-raised-button color="warn" class="method" (click)="arrayPop()">Array Pop</button>
+<button mat-raised-button color="warn" (click)="arrayForEach()">Array forEach</button>
+<button mat-raised-button color="warn" (click)="arrayReduce()">Array reduce</button>
+<button mat-raised-button color="warn" (click)="arrayFilter()">Array filter</button>
+<!--<button mat-raised-button color="primary" (click)="arraySort()">Array sort</button>-->
+<button mat-raised-button color="warn" (click)="arrayIncludes()">Array includes</button>
+<button mat-raised-button color="warn" (click)="arrayFind()">Array find</button>
+<!--<button mat-raised-button color="primary" (click)="arrayIndexOf()">Array indexOf</button>
+<button mat-raised-button color="primary" (click)="arraySome()">Array some</button>-->
+<br>
+
+
+
+<mat-table [dataSource]="employees" *ngIf="employees">
+  <!-- Replace the column definitions with the actual properties you have in your Employee model -->
+  <ng-container matColumnDef="id">
+    <mat-header-cell *matHeaderCellDef>ID</mat-header-cell>
+    <mat-cell *matCellDef="let employee">{{ employee.id }}</mat-cell>
+  </ng-container>
+  <!--<ng-container matColumnDef="name">
+    <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+    <mat-cell *matCellDef="let employee">{{ employee.firstName }}</mat-cell>
+  </ng-container>-->
+  <ng-container matColumnDef="firstName">
+    <mat-header-cell *matHeaderCellDef>firstName</mat-header-cell>
+    <mat-cell *matCellDef="let employee">{{ employee.firstName }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="lastName">
+    <mat-header-cell *matHeaderCellDef>lastName</mat-header-cell>
+    <mat-cell *matCellDef="let employee">{{ employee.lastName }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="age">
+    <mat-header-cell *matHeaderCellDef>Age</mat-header-cell>
+    <mat-cell *matCellDef="let employee">{{ employee.age }}</mat-cell>
+  </ng-container>
+  <ng-container matColumnDef="actions">
+    <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
+    <mat-cell *matCellDef="let employee">
+      <button mat-icon-button color="primary" (click)="openEditDialog(employee)">
+        <mat-icon>edit</mat-icon>
+      </button>
+      <button mat-icon-button color="warn" (click)="deleteEmployee(employee.id)">
+        <mat-icon>delete</mat-icon>
+      </button>
+    </mat-cell>
+  </ng-container>
+  <!-- Add additional column definitions for other properties -->
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let employee; columns: displayedColumns;"></mat-row>
+</mat-table>
+
+<mat-spinner *ngIf="!employees"></mat-spinner>

@@ -1,0 +1,19 @@
+.Add{
+    padding:10px 30px;
+    border:none;
+    border-radius: 10px;
+    background-color: #201b1a;
+    color:white;
+    font-weight: 500;
+    margin-bottom: 10px;
+  }
+  button:hover{
+    background-color: #fdbe70;
+    color:black;
+  }
+  .container{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+  }

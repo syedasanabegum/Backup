@@ -1,0 +1,38 @@
+<nav>
+    <a routerLink="/login">Login</a>
+    <a routerLink="/home">Home</a>
+    <a routerLink="/qualification">Qualification</a>
+    <a routerLink="/skills">Skills</a>
+    <a routerLink="/projects">Projects</a>
+    <a routerLink="/table">Table</a>
+    <a routerLink="/promise">Promise</a>
+    <a routerLink="/observable">Observable</a>
+    
+    <a (click)="openPopup()" style="cursor: pointer;" class="hover-effect">Logout</a>
+    <!--<a routerLink="/logout">Logout</a>-->
+  </nav>
+<div
+  class="modal"
+  tabindex="-1"
+  role="dialog"
+  [ngStyle]="{'display':displayStyle}">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">LOGOUT</h4>
+      </div>
+      <div class="modal-body">
+        <p>Do you want to logout?</p>
+  
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+        <button type="button" class="btn btn-danger" 
+                (click)="closePopup()">
+          Close
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+  

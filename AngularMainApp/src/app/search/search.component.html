@@ -1,0 +1,41 @@
+<app-header></app-header>
+<!--<section>
+  <div class="form">
+    <form class="form-inline">
+      <div class="form-group">
+        <input type="search" class="form-control" placeholder="Enter search string" #search>
+      </div>
+      <button type="button" class="btn btn-primary" (click)="doSearch(search.value)">Search</button>
+    </form>
+  </div>
+
+<hr />
+
+<div class="text-center">
+  <p class="lead" *ngIf="loading">Loading...</p>
+</div>
+
+<ul class="list-group">
+  <li class="list-group-item" *ngFor="let track of searchResults">
+    <img [src]="track.thumbnail" [alt]="track.track" class="thumbnail">
+    <a [href]="track.link" target="_blank">{{ track.track }}</a>
+  </li>
+</ul>
+</section>-->
+<!--<input type="text" [(ngModel)]="searchTerm" placeholder="Enter search term">
+<button (click)="fetchData()">Search</button>
+
+<div *ngIf="loading">Loading...</div>
+<div *ngIf="error">{{ error }}</div>
+
+<ul>
+  <li *ngFor="let item of results">
+    {{ item.trackName }} - {{ item.artistName }}
+    
+  </li>
+  
+  </ul>-->
+  <section>
+    <h1>Autocomplete</h1>
+  <app-autocomplete></app-autocomplete>
+ </section>
