@@ -7,6 +7,9 @@ import { LogoutComponent } from './logout/logout.component';
 import {SkillsComponent } from './skills/skills.component';
 import { ProjectsComponent } from './projects/projects.component';
 import { QualificationComponent } from './qualification/qualification.component';
+import {EmployeeFormComponent} from './employee-form/employee-form.component';
+import {EmployeeListComponent} from './employee-list/employee-list.component';
+
 //import { AuthGuard } from './auth.guard';
 
 export const routes: Routes = [
@@ -18,6 +21,7 @@ export const routes: Routes = [
   { path: 'skills', component:SkillsComponent},
   { path: 'projects', component:ProjectsComponent},
   { path: 'qualification', component:QualificationComponent},
+  {path:'table',component:EmployeeListComponent},
   { path: '**', redirectTo: '/login' } 
 ];
 

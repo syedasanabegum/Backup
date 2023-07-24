@@ -1,0 +1,21 @@
+<h2>{{ mode === 'create' ? 'Create' : 'Edit' }} Employee</h2>
+
+<form #employeeForm="ngForm" (ngSubmit)="saveEmployee()">
+  <!--<mat-form-field>
+    <input matInput placeholder="Name" name="name" [(ngModel)]="employee.name" required>
+  </mat-form-field>-->
+  <mat-form-field>
+    <input matInput  placeholder="firstName" name="firstName" [(ngModel)]="employee.firstName" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="lastName" name="lastName" [(ngModel)]="employee.lastName" required>
+  </mat-form-field>
+  <mat-form-field>
+    <input matInput placeholder="Age" name="age" [(ngModel)]="employee.age" required>
+  </mat-form-field>
+
+  <div class="buttons">
+    <button mat-raised-button color="primary" type="submit">{{ mode === 'create' ? 'Create' : 'Save' }}</button>
+    <button mat-raised-button color="warn" type="button" (click)="cancel()">Cancel</button>
+  </div>
+</form>

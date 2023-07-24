@@ -26,6 +26,7 @@ describe('HeaderComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
   it('should have the correct router links for each navigation item', () => {
     const navLinks = fixture.nativeElement.querySelectorAll('nav a');
     // Check each router link
@@ -37,6 +38,7 @@ describe('HeaderComponent', () => {
     expect(navLinks[5].getAttribute('routerLink')).toBe('/profile');
     expect(navLinks[6].getAttribute('routerLink')).toBe('/logout');
   });
+  
   it('should navigate to the correct route when a navigation item is clicked', () => {
     const navigateSpy = spyOn(router, 'navigate');
 
