@@ -5,11 +5,13 @@ import { Component } from '@angular/core';
   templateUrl: './projects.component.html',
   styleUrls: ['./projects.component.css']
 })
+
 export class ProjectsComponent {
   showForm: boolean = false;
   newProject: { image: string, title: string, description: string } = { image: '', title: '', description: '' };
   projects: { image: string, title: string, description: string }[] = [];
 
+  
   toggleForm() {
     this.showForm = !this.showForm;
   }
@@ -35,7 +37,7 @@ export class ProjectsComponent {
     return this.searchTerm ? this.filteredProjects : this.projects;
   }
 }
-interface Project {
+export interface Project {
   image: string;
   title: string;
   description: string;

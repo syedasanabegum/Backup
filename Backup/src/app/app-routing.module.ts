@@ -9,7 +9,7 @@ import { ProjectsComponent } from './projects/projects.component';
 import { QualificationComponent } from './qualification/qualification.component';
 //import { AuthGuard } from './auth.guard';
 
-const routes: Routes = [
+export const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'logout', component:LogoutComponent},
   { path: 'home', component: HomeComponent },
@@ -21,10 +21,14 @@ const routes: Routes = [
   { path: '**', redirectTo: '/login' } 
 ];
 
+const mockRoutes: Routes = [];
+
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes),RouterModule.forRoot(mockRoutes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule {
     routes: any;
+  config: any;
 }
