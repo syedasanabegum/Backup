@@ -1,78 +1,44 @@
-import { Injectable } from "@angular/core";
-import { HttpClient } from "@angular/common/http";
-import { SearchItem } from "./search-item.model";
+import { TestBed } from '@angular/core/testing';
+import { SearchService } from './search.service';
+import { MockHttpClient } from './mock-http-client';
+import { HttpClient } from '@angular/common/http';
 
-@Injectable()
-export class SearchService {
-  /*
-  apiRoot: string = "https://itunes.apple.com/search";
+describe('SearchService', () => {
+  let service: SearchService;
 
-  constructor(private http: HttpClient) {}
-
-  search(term: string): Promise<SearchItem[]> {
-    let apiURL = `${this.apiRoot}?term=${term}&media=music&limit=20`;
-
-    return new Promise<SearchItem[]>((resolve, reject) => {
-      this.http
-        .get(apiURL)
-        .toPromise()
-        .then((res: any) => {
-          let results = res.results.map((item: any) => {
-            return new SearchItem(
-              item.trackName,
-              item.artistName,
-              item.trackViewUrl,
-              item.artworkUrl30,
-              item.artistId
-            );
-          });
-          resolve(results);
-        })
-        .catch((error: any) => {
-          reject(error);
-        });
+  beforeEach(() => {
+    TestBed.configureTestingModule({
+      providers: [
+        SearchService,
+        { provide: HttpClient, useClass: MockHttpClient }, 
+      ],
     });
-  }*/
-  /*main*/
-  /*constructor(private http: HttpClient) {}
+    service = TestBed.inject(SearchService);
+  });
 
-  getDataFromApi(searchTerm: string): Promise<any> {
-    return new Promise<any>((resolve, reject) => {
-      const apiURL = `https://itunes.apple.com/search?term=${searchTerm}&media=music&limit=20`;
-  
-      this.http.get(apiURL)
-        .toPromise()
-        .then((response: any) => {
-          resolve(response);
-        })
-        .catch((error: any) => {
-          reject(error);
-        });
+  it('should be created', () => {
+    expect(service).toBeTruthy();
+  });
+/*
+  it('should fetch data from the API and map it to SearchItems', (done) => {
+    const searchTerm = 'Mock';
+    const expectedSearchItems = [
+      {
+        track: 'Mock Track 1',
+        artist: 'Mock Artist 1',
+        link: 'http://mock-track-url-1',
+        thumbnail: 'http://mock-artwork-url-1',
+        artistId: 'mock-artist-id-1',
+      },
+      // Add more expected search items based on your mock data
+    ];
+
+    // Call the service method
+    service.getDataFromApi(searchTerm).then((searchItems) => {
+      expect(searchItems).toEqual(expectedSearchItems);
+      done();
     });
-  }*/
-  /*mainEnd*/
-  constructor(private http: HttpClient) {}
-  getDataFromApi(searchTerm: string): Promise<SearchItem[]> {
-    
-    return new Promise<SearchItem[]>((resolve, reject) => {
-      const apiURL = `https://itunes.apple.com/search?term=${searchTerm}&media=music&limit=20`;
-      this.http.get(apiURL)
-        .toPromise()
-        .then((response: any) => {
-          const results = response.results.map((item: any) => {
-            return new SearchItem(
-              item.trackName,
-              item.artistName,
-              item.trackViewUrl,
-              item.artworkUrl30,
-              item.artistId
-            );
-          });
-          resolve(results);;
-        })
-        .catch((error: any) => {
-          reject(error);
-        });
-    });
-  }
-}
+  });
+*/
+  // Add more unit tests as needed
+});

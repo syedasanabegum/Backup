@@ -21,9 +21,9 @@ export class SearchComponent {
   error: string | null = null;
   results: any[] = [];
 
-  constructor(private dataService: SearchService) {}
+  constructor(public dataService: SearchService) {}
 
-  fetchData(): void {
+  /*fetchData(): void {
     this.loading = true;
     this.error = null;
     this.results = [];
@@ -37,5 +37,23 @@ export class SearchComponent {
         this.error = error.message;
         this.loading = false;
       });
+  }*/
+  fetchData(): Promise<SearchItem[]> { // Add the return type Promise<SearchItem[]>
+    this.loading = true;
+    this.error = null;
+    this.results = [];
+  
+    return this.dataService.getDataFromApi(this.searchTerm) // Return the promise
+      .then((data: any) => {
+        this.results = data.results;
+        this.loading = false;
+        return data.results; // Return the results from the promise
+      })
+      .catch((error: any) => {
+        this.error = error.message;
+        this.loading = false;
+        throw error; // Throw the error to propagate it to the test case
+      });
   }
+  
 }

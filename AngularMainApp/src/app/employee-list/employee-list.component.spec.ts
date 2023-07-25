@@ -32,7 +32,7 @@ describe('EmployeeListComponent', () => {
         { provide: MatDialog, useValue: mockMatDialog },
       ],
     }).compileComponents();
-  });
+    });
 
   beforeEach(() => {
     fixture = TestBed.createComponent(EmployeeListComponent);
