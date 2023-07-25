@@ -19,7 +19,6 @@ const routes: Routes = [
   { path: 'home', component: HomeComponent, },
   {path:'table',component:EmployeeListComponent},
   { path: 'profile', component: ProfileComponent,  },
-  { path: 'login', component: LoginComponent, },
   { path: 'skills', component:SkillsComponent, },
   { path: 'projects', component:ProjectsComponent,},
   { path: 'qualification', component:QualificationComponent,},// canActivate: [AuthGuard]
