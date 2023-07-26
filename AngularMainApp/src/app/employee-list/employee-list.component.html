@@ -2,7 +2,7 @@
 <h2>Employee List</h2>
 
 <button mat-raised-button color="primary" class="add-employee-button" (click)="openCreateDialog()">Create Employee</button>
-<button mat-raised-button color="primary" (click)="executeArrayMethods()">Array Methods</button>
+<button mat-raised-button color="primary" (click)="executeArrayMethods()" class="array-methods-button">Array Methods</button>
 <br>
 <button mat-raised-button color="warn" class="method" (click)="arrayPop()">Array Pop</button>
 <button mat-raised-button color="warn" (click)="arrayForEach()">Array forEach</button>
@@ -42,7 +42,7 @@
   <ng-container matColumnDef="actions">
     <mat-header-cell *matHeaderCellDef>Actions</mat-header-cell>
     <mat-cell *matCellDef="let employee">
-      <button mat-icon-button color="primary" (click)="openEditDialog(employee)">
+      <button mat-icon-button color="primary" (click)="openEditDialog(employee)" class="edit-employee-button">
         <mat-icon>edit</mat-icon>
       </button>
       <button mat-icon-button color="warn" (click)="deleteEmployee(employee.id)">

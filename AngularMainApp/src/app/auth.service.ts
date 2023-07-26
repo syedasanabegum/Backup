@@ -32,3 +32,8 @@ export class AuthService {
   }
   
 }
+//for testing purpose
+export class MockAuthService {
+  isAuthenticatedUser: boolean = false;
+}
+
