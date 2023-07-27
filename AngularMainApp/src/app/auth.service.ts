@@ -12,9 +12,10 @@ export class AuthService {
   constructor(private http: HttpClient, private router: Router) {}
 
   login(username: string, password: string): Observable<any> {
+    console.log(this.http.post('https://dummyjson.com/auth/login', { username, password }));
     return this.http.post('https://dummyjson.com/auth/login', { username, password });
   }
-
+ 
   logout(): void {
     // Perform logout logic
     

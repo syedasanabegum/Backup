@@ -14,6 +14,7 @@ import { AuthService } from '../auth.service';
 export class LoginComponent {
   username = ''; // Assign a default value here
   password = '';
+  token='';
 
   constructor(private authService: AuthService, private router: Router) {}
 
@@ -21,6 +22,8 @@ export class LoginComponent {
     this.authService.login(this.username, this.password).subscribe(
       (response) => {
         const isAuthenticated = response.token || response.success;
+        const token = response.token;
+        console.log(response.token);
         if (isAuthenticated) {
           this.authService.isAuthenticatedUser = true;
           this.router.navigate(['/home']); // Redirect to the protected route
