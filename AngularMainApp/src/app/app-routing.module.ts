@@ -15,15 +15,15 @@ import { ObservableComponent } from './observable/observable.component';
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
- { path: 'logout', component:LogoutComponent,  },
-  { path: 'home', component: HomeComponent, },
-  {path:'table',component:EmployeeListComponent},
-  { path: 'profile', component: ProfileComponent,  },
-  { path: 'skills', component:SkillsComponent, },
-  { path: 'projects', component:ProjectsComponent,},
-  { path: 'qualification', component:QualificationComponent,},// canActivate: [AuthGuard]
-  { path:'promise', component:SearchComponent},
-  {path:'observable', component:ObservableComponent},
+ { path: 'logout', component:LogoutComponent, canActivate: [AuthGuard] },
+  { path: 'home', component: HomeComponent,canActivate: [AuthGuard] },
+  {path:'table',component:EmployeeListComponent, canActivate: [AuthGuard]},
+  { path: 'profile', component: ProfileComponent,canActivate: [AuthGuard]  },
+  { path: 'skills', component:SkillsComponent,canActivate: [AuthGuard] },
+  { path: 'projects', component:ProjectsComponent,canActivate: [AuthGuard]},
+  { path: 'qualification', component:QualificationComponent,canActivate: [AuthGuard]},// canActivate: [AuthGuard]
+  { path:'promise', component:SearchComponent,canActivate: [AuthGuard]},
+  {path:'observable', component:ObservableComponent,canActivate: [AuthGuard]},
   
  
   
