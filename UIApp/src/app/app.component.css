@@ -1,0 +1,28 @@
+.main{
+    background-color: #d7d8dd;
+    padding:10px;
+    border-radius: 10px;
+    margin:5px;
+}
+.main-box{
+    background-color: white;
+    margin:20px;
+    border-radius: 10px;  
+   
+}
+.left{
+    width:15vw;
+}
+.example-container {
+    height:500px;
+
+    margin:0px 10px 10px 10px;
+    overflow-y: hidden;
+}  
+.user-avatar {
+    vertical-align: middle;
+    width: 35px; /* Adjust the size as needed */
+    height: 35px; /* Make sure width and height are equal for a circular shape */
+    border-radius: 50%; /* This creates a circular shape */
+  }
+  

@@ -1,0 +1,31 @@
+h6{
+    font-size:18px;
+}
+.wrapper{
+    border: solid 1px rgba(0, 0, 0, 0.12);
+    border-left: solid 5px #96af70;
+}
+/* your-component.component.css */
+.custom-tile {
+    text-align: left;
+  }
+  mat-grid-list {
+    width: 100%;
+  }
+  
+  .item1 {
+    background-color: #f2f2f2;
+    width: 75%;
+  }
+  
+  .item2 {
+    background-color: #ccc;
+    width: 25%;
+  }
+  .user-avatar {
+    vertical-align: middle;
+    width: 35px; /* Adjust the size as needed */
+    height: 35px; /* Make sure width and height are equal for a circular shape */
+    border-radius: 50%; /* This creates a circular shape */
+  }
+  

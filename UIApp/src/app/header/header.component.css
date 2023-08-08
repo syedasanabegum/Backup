@@ -1,0 +1,47 @@
+section{
+    display:flex;
+    justify-content:space-between;
+    padding:10px 10px 0px 10px;
+}
+.material-icons {
+    font-size: 24px;
+    color: blue;
+  }
+.fa-circle{
+    margin-left:5px;
+}
+.fa-angle-left{
+    margin-left: 10px;
+    color:#a5a5a5;
+}
+.fa-angle-right{
+    margin-left:10px;
+    color:#d7d7d7;
+}
+.fa-shield{
+    padding-right: 20px;
+    color:#727272;
+}
+.fa-lock{
+    padding-left: 80px;
+    padding-right: 5px;
+    color:#9b9b9b;
+}
+.fa-repeat{
+    padding-left: 160px;
+    padding-right:5px;
+    color:#848484;
+}
+.mid{
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding-left: 80px;
+    padding-top:5px;
+    padding-bottom: 5px;
+    width:20%;
+    color:#848484;
+}
+.right .fa{
+    margin-left: 20px;
+    color:#969696;
+}

@@ -1,0 +1,12 @@
+.toggle{
+    font-size: small;
+    font-weight: bold;
+}
+.alarm{
+    border:solid 1px #eaeaea;
+    background-color: #de502f;
+    color:white;
+}
+.fa-clock-o{
+    font-size: large;
+}
