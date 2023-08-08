@@ -1,0 +1,18 @@
+<div >
+<h2 mat-dialog-title>Add Card Data</h2>
+<div>
+<div mat-dialog-content >
+  <mat-form-field>
+    <input matInput [(ngModel)]="formData.title" placeholder="Title">
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput [(ngModel)]="formData.description" placeholder="Description"></textarea>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="dialogRef.close()">Cancel</button>
+  <button mat-button (click)="onSubmit()">Submit</button>
+</div>
+</div>
+</div>
+
