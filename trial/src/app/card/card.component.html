@@ -1,0 +1,33 @@
+<!--<mat-card>
+    <mat-card-content>
+      <h3>{{ cardData.title }}</h3>
+      <p>{{ cardData.description }}</p>
+    </mat-card-content>
+  </mat-card>-->
+  -------
+<!-- <mat-card>
+    <mat-card-content>
+      <h3>Submitted Data</h3>
+      <p>Name: {{ formData[0] }}</p>
+      <p>Email: {{ formData[1] }}</p>
+    </mat-card-content>
+  </mat-card>-->
+  <ng-container *ngFor="let data of formData; let i = index">
+    <mat-card>
+      <mat-card-content>
+        <h3>Submitted Data {{ i + 1 }}</h3>
+        <p>Date: {{data.date}}</p>
+        <p>Time: {{data.time}}</p>
+        <p>Door Code: {{data.doorCode}}</p>
+        <p>Gate Code: {{data.gateCode}}</p>
+        <p>Title: {{data.title}}</p>
+        <p>PhoneNO: {{data.contactNO}}</p>
+        <p>Address: {{data.address}} </p>
+        <p>Name: {{ data.name }}</p>
+        <p>Email: {{ data.email }}</p>
+      </mat-card-content>
+    </mat-card>
+  </ng-container>
+    
+  
+  
